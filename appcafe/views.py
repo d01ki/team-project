@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.http import Http404, JsonResponse
 from django.utils import timezone
 import random
-from blog.models import Article, Comment
+from appcafe.models import Article, Comment
 
 
 # Create your views here.
@@ -27,7 +27,7 @@ def index(request):
 	context = {
 		"articles": articles
 	}
-	return render(request, 'blog/index.html', context)
+	return render(request, 'appcafe/index.html', context)
 
 
 import random
@@ -44,7 +44,7 @@ def hello(request):
 	    'fortune' : print(fortune)
 	}
 	
-    return render(request, 'blog/hello.html', date)
+    return render(request, 'appcafe/hello.html', date)
 
 
 def redirect_test(request):
@@ -63,7 +63,7 @@ def detail(request, article_id):
 		'article': article,
 		'comments': article.comments.order_by('-posted_at')
 	}
-	return render(request, "blog/detail.html", context)
+	return render(request, "appcafe/detail.html", context)
 
 def update(request, article_id):
 	try:
@@ -78,7 +78,7 @@ def update(request, article_id):
 	context = {
 		'article': article
 	}
-	return render(request, "blog/edit.html", context)
+	return render(request, "appcafe/edit.html", context)
 
 def delete(request, article_id):
 	try:
