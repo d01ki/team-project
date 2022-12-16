@@ -7,9 +7,7 @@
     <link href="{% static 'appcafe/css/default.css' %}" rel="stylesheet">
   </head>
   <body>
-    <div id="header">
-      <img src="{% static 'appcafe/img/iniad.png' %}" alt="Logo">
-    </div>
+
     <h1 >Edit article</h1>
     <form action="{% url 'update' article.id %}" method="post">
       {% csrf_token %}
