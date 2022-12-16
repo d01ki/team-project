@@ -33,23 +33,6 @@
       <a href="{% url 'index' %}?sort=like">Sort by Like</a>
     </div>
 
-    {% if articles %}
-    {% for article in articles %}
-    <div class="text">
-      <h2><a href="{% url 'detail' article.id %}">{{ article.title }}</a></h2>
-      <small>[{{ article.posted_at }}]</small>
-      <div>
-        <a onclick="like({{article.id}});">
-          Like: <span id="like{{article.id}}">{{ article.like }}</span>
-        </a>
-      </div>
-      <div>
-        {{ article.body | linebreaksbr }}
-      </div>
-    </div>
-    {% endfor %}
-    {% else %}
-    <p>No article.</p>
-    {% endif %}
+    
   </body>
 </html>
