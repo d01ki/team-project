@@ -97,7 +97,20 @@
   </div>
 </section>
 <!-- /blog -->
-
+<p>You can submit articles from the following form.</p>
+<form action="{% url 'index' %}" method="post">
+  {% csrf_token %}
+  <div>
+    <label for="titleInput">Title</label><br>
+    <input id="titleInput" name="title" type="text" placeholder="Input title">
+  </div>
+  <div>
+    <label for="textInput">Text</label><br>
+    <textarea id="textInput" name="text" rows="3"></textarea>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
 <!-- footer -->
 <footer class="footer">
   <div class="logo"><a href="#"><img src="images/logo-white.png" alt="SKY COFFEE" width="200" height="40"></a></div>
