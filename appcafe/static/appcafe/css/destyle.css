@@ -1,0 +1,254 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
+    sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  h1{
+    font-family: Arial,
+    sans-serif;
+    font-size: 16px;
+    color: #333;
+
+  }
+
+  .layer{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* 背景画像の読み込み */
+  .layer-bg{
+    background: path("\Users\iniad\Downloads\image_67174145.JPG") no-repeat 0 0;
+    background-size: 100%;
+  }
+  
+  /* 重ねるボックスの設定 */
+  .layer-in{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  
+  /* 重ねる文字の基本設定 */
+  .layer-txt{
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    color: #fff;
+    letter-spacing: 0.4rem;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.8;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  a:hover {
+    opacity: .8;
+  }
+
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .header {
+    padding: 50px 0;
+  }
+  
+  .header .logo {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .main-visual {
+    text-align: center;
+  }
+
+  .global-nav {
+    padding: 40px 0;
+  }
+  
+  .global-nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .global-nav ul li {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-right: 80px;
+  }
+  
+  .global-nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  .global-nav__item {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-right: 80px;
+  }
+  
+  .concept {
+    padding: 50px 0;
+  }
+  
+  .concept > .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .concept .img {
+    width: 50%;
+  }
+  
+  .concept .desc {
+    width: 50%;
+    padding-right: 20px;
+    padding-left: 40px;
+  }
+  
+  .concept .subtitle {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+  
+  .concept .title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    color: #24a8bf;
+    margin-bottom: 30px;
+  }
+  
+  .concept .text p {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+  }
+
+  .blog {
+    padding: 50px 0;
+  }
+  
+  .blog .heading {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    color: #24a8bf;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .blog .subtitle {
+    display: block;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: #333;
+    margin-top: 8px;
+  }
+  
+  .blog .list {
+    display: flex;
+    flex-flow: wrap;
+  }
+  
+  .blog .list .item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    /* flex: 0 1 calc((100% - 60px) / 3); */
+  }
+  
+  .blog .list .item:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  .blog .list .item:hover {
+    opacity: 0.8;
+  }
+  
+  .blog .list .img {
+    margin-bottom: 12px;
+  }
+  
+  .blog .list .title {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: bold;
+  }
+  
+  .blog .list .date {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  
+  .btn {
+    display: block;
+    position: relative;
+    width: 220px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #24a8bf;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+    padding: 18px 0;
+    transition: opacity 0.3s;
+    border: 1px solid #24a8bf;
+    border-radius: 3px;
+  }
+  
+  .btn::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    width: 5px;
+    height: 9px;
+    transform: translateY(-50%);
+    background-image: url("./image/icon_arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 5px 9px;
+  }
+
+  .footer {
+    padding: 70px 0 30px;
+    background-color: #000;
+  }
+  
+  .footer .logo {
+    width: 180px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  
+  .footer .copyright {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: #8b8b8b;
+    text-align: center;
+  }
