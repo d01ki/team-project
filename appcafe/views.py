@@ -27,7 +27,7 @@ def index(request):
 	context = {
 		"articles": articles
 	}
-	return render(request, 'appcafe/index.html', context)
+	return render(request, 'appcafe/cafe.html', context)
 
 
 import random
