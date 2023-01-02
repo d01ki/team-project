@@ -93,12 +93,12 @@
 <p>You can submit articles from the following form.</p>
 <form action="{% url 'index' %}" method="post">
   {% csrf_token %}
-  <div>
-    <label for="titleInput">Title</label><br>
+  <div class="cp_iptxt">
+    <label for="titleInput" class="ef">Title</label><br>
     <input id="titleInput" name="title" type="text" placeholder="Input title">
   </div>
-  <div>
-    <label for="textInput">Text</label><br>
+  <div class="cp_iptxt">
+    <label for="textInput" class="ef">Text</label><br>
     <textarea id="textInput" name="text" rows="3"></textarea>
   </div>
   <div>
