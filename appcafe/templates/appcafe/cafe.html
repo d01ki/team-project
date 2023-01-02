@@ -102,8 +102,27 @@
     <textarea id="textInput" name="text" rows="3"></textarea>
   </div>
   <div>
-    <button type="submit">Submit</button>
+    <button type="submit" >Submit</button>
   </div>
+
+  {% if articles %}
+  {% for article in articles %}
+  <div>
+    <h2><a href="{% url 'detail' article.id %}">{{ article.title }}</a></h2>
+    <small>[{{ article.posted_at }}]</small>
+    <div>
+      <a onclick="like({{article.id}});">
+        Like: <span id="like{{article.id}}">{{ article.like }}</span>
+      </a>
+    </div>
+    <div>
+      {{ article.body | linebreaksbr }}
+    </div>
+  </div>
+  {% endfor %}
+  {% else %}
+  <p></p>
+  {% endif %}
 
 </body>
 </html>

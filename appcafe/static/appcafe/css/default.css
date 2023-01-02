@@ -2,20 +2,13 @@ body {
     font-family: sans-serif;
 }
 
-h1 {
-    border-bottom: solid 1px #17194c;
-}
+
 
 h2 {
     padding: 0px 10px 0px 10px;
     border-left: solid 4px #17194c;
 }
 
-#header {
-    background-color: #17194c;
-    padding: 10px 20px 10px 20px;
-    height: 40px;
-}
 
 #header img {
     height: 100%;
