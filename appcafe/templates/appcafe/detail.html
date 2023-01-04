@@ -1,12 +1,12 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <title>Detail</title>
+    <link href="{% static 'appcafe/css/default.css' %}" rel="stylesheet">
     <meta charset="UTF-8"></head>
   <body>
-    <h1>Django Sample Application</h1>
-    <h2>Title: {{ article.title }}</h2>
+    <h1><span class="aiueo">Title: {{ article.title }}</span></h1>
     <small>Posted at:{{ article.posted_at }}</small>
     <div>
       {{ article.body | linebreaksbr }}
